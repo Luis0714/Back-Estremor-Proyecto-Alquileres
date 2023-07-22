@@ -2,7 +2,7 @@
 {
     public enum EnumRol
     {
-        SuperAdmin = 1,
-        Cliente = 2
+        Cliente = 1,
+        SuperAdmin = 2
     }
 }

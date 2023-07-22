@@ -45,7 +45,7 @@ namespace WebAPI.Controllers.V1
             return Ok(await Mediator.Send(userId));
         }
 
-        [Authorize]
+        [AllowAnonymous]
         [HttpGet]
         [Route("resetPassword")]
         public async Task<IActionResult> ResetPassword(ResetPasswordCommand email)

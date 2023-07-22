@@ -44,7 +44,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).
     });
 
 int superAdminId = (int)EnumRol.SuperAdmin;
-int clienteId = (int)EnumRol.SuperAdmin;
+int clienteId = (int)EnumRol.Cliente;
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("SuperAdmin", policy => policy.RequireClaim("RolId", superAdminId.ToString()));
