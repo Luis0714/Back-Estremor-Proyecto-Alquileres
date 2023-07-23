@@ -27,16 +27,16 @@ namespace Persistence
             services.AddTransient(typeof(IRolRepository<>), typeof(RolRepository<>));
             #endregion
 
-            var serviceProvider = services.BuildServiceProvider();
-            try
-            {
-                var dbContext = serviceProvider.GetRequiredService<ApplicationDBContext>();
-                dbContext.Database.Migrate();
-            }
-            catch
-            {
+            //var serviceProvider = services.BuildServiceProvider();
+            //try
+            //{
+            //    var dbContext = serviceProvider.GetRequiredService<ApplicationDBContext>();
+            //    dbContext.Database.Migrate();
+            //}
+            //catch
+            //{
 
-            }
+            //}
         }
     }
 }
