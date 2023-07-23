@@ -24,8 +24,8 @@ namespace WebAPI.Controllers.V1
             try
             {
                 var response = await Mediator.Send(new DownloadFile() { Ruta = ruta });
-                if(response.Data?.ContentType != null && response.Data.Bytes != null)
-                    return File(response.Data.Bytes, response.Data.ContentType, Path.GetFileName(ruta));
+                if(response.data?.ContentType != null && response.data.Bytes != null)
+                    return File(response.data.Bytes, response.data.ContentType, Path.GetFileName(ruta));
             }
             catch(Exception ex)
             {
