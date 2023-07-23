@@ -137,7 +137,6 @@ appsettings.json
 *.pdb
 /Shared/bin/Release/net6.0
 /Shared/obj/Release/net6.0
-/WebAPI/bin/Debug/net6.0/appsetting.json
 /WebAPI/bin/Debug/net6.0/appsettings.Development.json
 /WebAPI/bin/Release/net6.0/publish
 /WebAPI/bin/Release/net6.0

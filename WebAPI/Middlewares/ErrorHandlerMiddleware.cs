@@ -25,7 +25,7 @@ namespace WebAPI.Middlewares
                 var response = context.Response;
                 response.ContentType = "application/json";
                 var responseModel = new Response<string>() 
-                { Succeeded = false, Message = error?.Message};
+                { succeeded = false, message = error?.Message};
                 switch (error)
                 {
                     case ApiException:
@@ -33,7 +33,7 @@ namespace WebAPI.Middlewares
                         break;
                     case ValidationException exception:
                         response.StatusCode = (int)HttpStatusCode.BadRequest;
-                        responseModel.Errors = exception.Errors;
+                        responseModel.errors = exception.Errors;
                         break;
                     case KeyNotFoundException:
                         response.StatusCode = (int)HttpStatusCode.NotFound;

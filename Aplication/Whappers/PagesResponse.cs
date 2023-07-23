@@ -6,10 +6,10 @@
         {
             PageNumber = pageNumber;
             PageZise = pageZise;
-            Data = data;
-            Message = null;
-            Succeeded = true;
-            Errors = null;
+            this.data = data;
+            this.message = null;
+            this.succeeded = true;
+            this.errors = null;
         }
 
         public int PageNumber { get; set; }
