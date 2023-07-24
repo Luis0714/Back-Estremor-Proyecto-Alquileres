@@ -23,7 +23,13 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("http://localhost:4200", "https://shiny-pavlova-0cb0e9.netlify.app")
+    
+        builder.WithOrigins
+        (
+        "http://localhost:4200", 
+        "https://shiny-pavlova-0cb0e9.netlify.app", 
+        "https://production--shiny-pavlova-0cb0e9.netlify.app"
+        )
                .AllowAnyHeader()
                .AllowAnyMethod();
     });
