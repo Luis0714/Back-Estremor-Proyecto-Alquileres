@@ -1,7 +1,9 @@
 ﻿using Application.Behaviours;
+using Application.Services.Abstraction.AzureServices;
 using Application.Services.Abstraction.FileServices;
 using Application.Services.Abstraction.SecurityServices;
 using Application.Services.Abstraction.UsersServices;
+using Application.Services.Implementation.AzureServices;
 using Application.Services.Implementation.FileServices;
 using Application.Services.Implementation.SecurityServices;
 using Application.Services.Implementation.UsersServices;
@@ -29,6 +31,7 @@ namespace Application
             services.AddTransient<IPasswordService, PasswordService>();
             services.AddTransient<IEncrypPasswordService, EncryptPasswordService>();
             services.AddTransient<IMessageEmailSender, MessageSenderService>();
+            services.AddTransient<IAzureBlogStorageService, AzureBlogStorageService>();
         }
     }
 }

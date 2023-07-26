@@ -10,9 +10,6 @@ namespace Application.Features.Users.Commands.CrateUserCommand
             RuleFor(property => property.Name)
                                         .NotEmpty()
                                         .WithMessage(MessageUserErrors.NameRequared);
-            RuleFor(property => property.Image)
-                                        .NotEmpty()
-                                        .WithMessage(MessageUserErrors.ImageRequared);
             RuleFor(property => property.LastName)
                                         .NotEmpty()
                                         .WithMessage(MessageUserErrors.LastNameRequared);
