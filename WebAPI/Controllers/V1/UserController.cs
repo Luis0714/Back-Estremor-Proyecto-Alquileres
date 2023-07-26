@@ -16,7 +16,7 @@ namespace WebAPI.Controllers.V1
         [AllowAnonymous]
         [HttpPost]
         [Route("createUser")]
-        public async Task<IActionResult> Create(CreateUserCommand user)
+        public async Task<IActionResult> Create([FromForm] CreateUserCommand user)
         {
             return Ok(await Mediator.Send(user));
         }
