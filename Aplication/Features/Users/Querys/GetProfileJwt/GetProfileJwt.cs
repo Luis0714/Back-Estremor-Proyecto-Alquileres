@@ -1,4 +1,5 @@
-﻿using Application.DTO_s;
+﻿using Application.Constants;
+using Application.DTO_s;
 using Application.Interfaces.Repositories;
 using Application.Services.Abstraction.SecurityServices;
 using Application.Whappers;
@@ -42,6 +43,10 @@ namespace Application.Features.Users.Querys.GetProfileJwt
             var result = _mapper.Map<UserDto>(user);
             if (rol != default)
                 result.Rol = new RolDto() { RolId = rol.RolId, Nombre = rol.Nombre };
+            if (user.Image != UserConst.DEFAULTIMAGE)
+            {
+                result.Image = UserConst.AZURESTORAGEURL + user.Image;
+            }
             return new Response<UserDto>(result);
         }
     }

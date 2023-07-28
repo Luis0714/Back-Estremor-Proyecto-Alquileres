@@ -28,7 +28,8 @@ builder.Services.AddCors(options =>
         (
         "http://localhost:4200", 
         "https://shiny-pavlova-0cb0e9.netlify.app", 
-        "https://production--shiny-pavlova-0cb0e9.netlify.app"
+        "https://production--shiny-pavlova-0cb0e9.netlify.app",
+        "https://estremor-web.azurewebsites.net"
         )
                .AllowAnyHeader()
                .AllowAnyMethod();

@@ -1,4 +1,5 @@
-﻿using Application.DTO_s;
+﻿using Application.Constants;
+using Application.DTO_s;
 using Application.Espesification;
 using Application.Interfaces.Repositories;
 using Application.Whappers;
@@ -35,6 +36,10 @@ namespace Application.Features.Users.Querys.GetAllUsers
                 var rol = roles.FirstOrDefault(rol => rol.RolId == userDTO.RolId);
                 if(rol != null) 
                     userDTO.Rol = new RolDto() { RolId = rol.RolId, Nombre = rol.Nombre};
+                if(user.Image != UserConst.DEFAULTIMAGE)
+                {
+                    userDTO.Image = UserConst.AZURESTORAGEURL + user.Image;
+                }
                 result.Add(userDTO);
             });
             return new Response<List<UserDto>>(result);
