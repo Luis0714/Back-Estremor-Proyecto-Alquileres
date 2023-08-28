@@ -1,4 +1,5 @@
 ﻿using Application.DTO_s;
+using Application.Features.DocumentsTypes.Commands.CreateDocumentTypeCommand;
 using Application.Features.Roles.Command.CreateRolCommand;
 using Application.Features.Users.Commands.CrateUserCommand;
 using AutoMapper;
@@ -10,7 +11,7 @@ namespace Application.Mappings
     {
         public GeneralMapping()
         {
-            #region Commands User
+            #region User
             CreateMap<CreateUserCommand, User>();
             CreateMap<User, UserDto>();
             #endregion
@@ -19,6 +20,12 @@ namespace Application.Mappings
             CreateMap<Rol, RolDto>();
             CreateMap<CreateRolCommand, Rol>();
             #endregion
+
+            #region DocumentType
+            CreateMap<DocumentType, DocumentTypeDto>();
+            CreateMap<CreateDocumentTypeCommand, DocumentType>();
+            #endregion
+
         }
     }
 }

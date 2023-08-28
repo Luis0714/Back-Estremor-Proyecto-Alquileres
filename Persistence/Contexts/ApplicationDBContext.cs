@@ -16,6 +16,7 @@ namespace Persistence.Contexts
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<DocumentType> DucumentsTypes { get; set; }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             foreach (var entry in ChangeTracker.Entries<AuditableBaseEntity>())

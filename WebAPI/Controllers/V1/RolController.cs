@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace WebAPI.Controllers.V1
 {
     [ApiVersion("1.0")]
-    [Authorize(Policy = "SuperAdmin")]
+    //[Authorize(Policy = "SuperAdmin")]
     public class RolController : BaseApiController
     {
         [HttpPost]
