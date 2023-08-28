@@ -1,5 +1,4 @@
 ﻿using Application.Messages.Rol;
-using Application.Messages.User;
 using FluentValidation;
 
 namespace Application.Features.Roles.Command.CreateRolCommand

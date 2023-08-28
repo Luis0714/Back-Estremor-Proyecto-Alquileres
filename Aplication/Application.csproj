@@ -47,6 +47,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Messages\DocumentType\DocumentTypeMessage.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DocumentTypeMessage.resx</DependentUpon>
+    </Compile>
     <Compile Update="Messages\Emails\ConstEmail.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -80,6 +85,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Messages\DocumentType\DocumentTypeMessage.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DocumentTypeMessage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Messages\Emails\ConstEmail.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ConstEmail.Designer.cs</LastGenOutput>
