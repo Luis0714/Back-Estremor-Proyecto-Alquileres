@@ -56,7 +56,9 @@ namespace Application.Features.Users.Commands.CrateUserCommand
 
         public async Task<Response<UserDto>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
-            var pathImage = await _azureBlogStorage.UploadAsync(request.FileImage, Containers.UsersContainer);
+            var pathImage = string.Empty;
+            if (request.FileImage != null)  pathImage = await _azureBlogStorage.UploadAsync(request.FileImage, Containers.UsersContainer); 
+            else pathImage = UserConst.DEFAULTIMAGE;
             //update image 
             /*await _azureBlogStorage.UploadAsync(request.FileImage, Containers.UsersContainer, user.imagen(string));
              * delete
