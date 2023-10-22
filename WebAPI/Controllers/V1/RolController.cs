@@ -11,9 +11,9 @@ namespace WebAPI.Controllers.V1
     {
         [HttpPost]
         [Route("createRol")]
-        public async Task<IActionResult> Create(CreateRolCommand rol)
+        public async Task<IActionResult> Create(CreateRolCommand rolCommand)
         {
-            return Ok(await Mediator.Send(rol));
+            return Ok(await Mediator.Send(rolCommand));
         }
 
         [HttpGet]

@@ -153,3 +153,4 @@ appsettings.json
 /WebAPI/appsettings.Development.json
 /WebAPI/obj
 /WebAPI/appsettings.Development.json
+/Persistence/obj
